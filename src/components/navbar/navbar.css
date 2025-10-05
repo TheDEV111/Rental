@@ -94,8 +94,148 @@
   margin-left: 50px;
 }
 
+/* Install MetaMask Button */
+.btn-warning {
+  padding: 7px 32px;
+  font-weight: 500;
+  margin-left: 50px;
+  background-color: #f39c12;
+  border-color: #f39c12;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.btn-warning:hover {
+  background-color: #e67e22;
+  border-color: #e67e22;
+  transform: translateY(-2px);
+  color: white;
+}
+
+/* Wallet Info Container */
+.wallet-info {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 10px 16px;
+  margin-left: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.wallet-info:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.wallet-details {
+  min-width: 140px;
+}
+
+.wallet-address {
+  font-family: 'Courier New', monospace;
+  letter-spacing: 0.5px;
+}
+
+.wallet-balance {
+  font-weight: 500;
+}
+
+.wallet-network {
+  font-style: italic;
+  opacity: 0.8;
+}
+
+/* Disconnect Button */
+.disconnect-btn {
+  font-size: 12px;
+  padding: 6px 14px;
+  border-color: rgba(255, 255, 255, 0.5);
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.disconnect-btn:hover {
+  background-color: rgba(220, 53, 69, 0.9);
+  border-color: #dc3545;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(220, 53, 69, 0.3);
+}
+
+/* Loading Spinner */
+.spinner-border-sm {
+  width: 0.875rem;
+  height: 0.875rem;
+}
+
+/* Error Alert */
+.alert-danger {
+  border: none;
+  background: rgba(220, 53, 69, 0.9);
+  color: white;
+  border-radius: 8px;
+  animation: slideInFromRight 0.3s ease-out;
+  font-weight: 500;
+}
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Loading State for Connect Button */
+.btn-primary:disabled {
+  opacity: 0.8;
+  cursor: not-allowed;
+}
+
+.btn-primary:disabled:hover {
+  transform: none;
+}
+
+/* Mobile Responsiveness */
 @media (max-width: 992px) {
   .order {
     order: -1;
+  }
+  
+  .wallet-info {
+    margin-left: 10px;
+    padding: 8px 12px;
+  }
+  
+  .wallet-details {
+    min-width: 120px;
+  }
+  
+  .btn-primary, .btn-warning {
+    margin-left: 20px;
+    padding: 6px 20px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .wallet-info {
+    flex-direction: column;
+    align-items: flex-end !important;
+    margin-left: 5px;
+  }
+  
+  .wallet-details {
+    margin-bottom: 8px;
+    margin-right: 0 !important;
+    text-align: center;
+  }
+  
+  .disconnect-btn {
+    font-size: 11px;
+    padding: 4px 10px;
   }
 }
